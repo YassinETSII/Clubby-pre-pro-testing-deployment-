@@ -1,1 +1,1 @@
-web: gunicorn clubyapp.wsgi --log-file -
+web: gunicorn clubbyapp.wsgi --log-file -
