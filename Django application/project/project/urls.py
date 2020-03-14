@@ -23,7 +23,9 @@ urlpatterns = [
 
 #Add URL maps to redirect the base URL to our application
 from django.views.generic import RedirectView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns += [
     path('', RedirectView.as_view(url='/clubby/', permanent=True)),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
